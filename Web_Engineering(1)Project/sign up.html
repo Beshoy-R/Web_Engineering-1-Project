@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body{ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("Photos/signup.jpg");
+         background-size: ;
+         background-repeat: no-repeat;
+     }
+        .top_nav {
+            top: 0px;
+            overflow: hidden;
+            height: 60px;
+            position: fixed;
+            width: 120%;
+            z-index: 1;
+            background-color:rgba(0,0,0,0.5);
+        }
+        
+        .nav_center {
+            margin-left: 100px;
+            padding-top: 5px;
+            box-sizing: border-box;
+        }
+        
+            .nav_center a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                border-radius: 5px;
+            }
+        
+                .nav_center a:hover {
+                    box-sizing: border-box;
+                    transition: 0.5s;
+                    background-color: rgba(4, 170, 109, 0.4);
+                    color: black;
+                    font-weight: bold;
+                    border: 2px solid rgba(4, 170, 109, 1);
+                    border-radius: 5px;
+                }
+        
+                .nav_center a.active {
+                    background-color: #04AA6D;
+                    color: black;
+                    font-weight:bold;
+                    border:2px solid black;
+                    border-radius:5px;
+                }
+        
+        .nav_left img {
+            padding: 2.5px;
+            position: absolute;
+            margin-left:-630px;
+            top:6px;
+            filter: brightness(1.4);
+        }
+        
+        .nav_left img:hover {
+            filter: none;
+        }
+        footer {
+            position: relative;
+            bottom: 0%;
+            left: 0;
+            right: 0;
+            background: #111;
+            height: 250px;
+            font-family: "Open Sans";
+            padding-top: 40px;
+            margin-top: 100px;
+            color: #fff;
+        }
+        
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+            .footer-content h3 {
+                font-size: 1.8rem;
+                font-weight: 400;
+                text-transform: capitalize;
+                line-height: 3rem;
+            }
+        
+            .footer-content p {
+                max-width: 500px;
+                margin: 10px auto;
+                line-height: 28px;
+                font-size: 14px;
+            }
+        
+        .socials {
+            background-color:red;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+        
+            .socials li {
+                margin: 0 10px;
+            }
+        
+            .socials a {
+                text-decoration: none;
+                color: #fff;
+            }
+        
+                .socials a i {
+                    font-size: 1.1rem;
+                    transition: color .4s ease;
+                }
+        
+                .socials a:hover i {
+                    color: aqua;
+                }
+          
+        .footer-bottom {
+            background: #000;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+            .footer-bottom p {
+                font-size: 14px;
+                word-spacing: 2px;
+                text-transform: capitalize;
+            }
+        
+            .footer-bottom span {
+                text-transform: uppercase;
+                opacity: .4;
+                font-weight: 200;
+            }
+            .container {
+                top: 50px;
+                bottom: 100px;
+                width: 90vw;
+                position: relative;
+                max-width: 600px;
+                padding: 2em 1.5em;
+                background-color: rgba(181, 174, 174, 0.8);
+                margin: 1em auto;
+                border-radius: 0.5em;
+              }
+              h4 {
+                font-size: 40px;
+                top: -10px;
+                text-align: center;
+                position: relative;
+              }
+              .input-section {
+                margin: 0.5em 0;
+              }
+              label,
+              .error-message {
+                display: block;
+                font-size: 1em;
+              }
+              label {
+                margin-bottom: 0.5em;
+                font-weight: 900;
+              }
+              .error-message {
+                margin-top: 0.2em;
+              }
+              input,
+              button {
+                display: block;
+                outline: none;
+                width: 100%;
+                padding: 0.5em;
+                border-radius: 0.3em;
+              }
+              input {
+                padding: 1em 0.5em;
+                border: 1.5px solid #d0d0d0;
+                background-color: rgba(255, 252, 252, 0.5);
+              }
+              button {
+                font-size: 1em;
+                background-color:  #0b8d41;
+                border-radius: 100px;
+                border-color: #000;
+                color: #ffffff;
+                padding: 0.8em 0;
+                margin-top: 2em;
+              }
+              .required-color {
+                color: #ff4747;
+              }
+              .error {
+                border-color: #ff4747;
+              }
+              .valid {
+                border-color: #37a137;
+              }
+              .hide {
+                display: none;
+              }
+              @media only screen and (max-width: 450px) {
+                .container {
+                  font-size: 14px;
+                }
+              }
+
+    </style>
+  </head>
+  <body>
+    <div class="top_nav">
+      <div class="nav_center">
+          <a href="login.html">Login</a>              
+          <a class="active" href="sign up.html">Sign up</a>
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="about.html">About Us</a>
+      </div>
+      <div>
+          <div class="nav_left">
+              <div><img id="imgcontact" src="Photos/logo.png" width="50" /></div>
+
+
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <form autocomplete="off">
+      <h4>Create Your Account</h4>
+      <div class="input-section">
+        <label>First Name <span class="required-color">*</span></label>
+        <input
+          type="text"
+          placeholder="Enter First Name"
+          id="first-name-input"
+          required
+        />
+        <span id="first-name-error" class="hide required-color error-message"
+          >Invalid Input</span
+        >
+        <span id="empty-first-name" class="hide required-color error-message"
+          >First Name Cannot Be Empty</span
+        >
+      </div>
+      <div class="input-section">
+        <label>Last Name <span class="required-color">*</span></label>
+        <input
+          type="text "
+          placeholder="Enter Last Name"
+          id="last-name-input"
+          required
+        />
+        <span id="last-name-error" class="hide required-color error-message"
+          >Invalid Input</span
+        >
+        <span id="empty-last-name" class="hide required-color error-message">
+          Last Name Cannot Be Empty
+        </span>
+      </div>
+
+      <div class="input-section">
+        <label>Email <span class="required-color">*</span></label>
+        <input type="email" placeholder="Enter Email" id="email" required />
+        <span id="email-error" class="hide required-color error-message"
+          >Invalid Email</span
+        >
+        <span id="empty-email" class="hide required-color error-message"
+          >Email Cannot Be Empty</span
+        >
+      </div>
+
+      <div class="input-section">
+        <label>Phone <span class="required-color">*</span></label>
+        <input
+          type="text"
+          placeholder="Enter Phone Number"
+          id="phone"
+          required
+        />
+        <span id="phone-error" class="hide required-color error-message"
+          >Phone Number Should Have 10 Digits</span
+        >
+        <span id="empty-phone" class="hide required-color error-message">
+          Phone cannot be empty
+        </span>
+      </div>
+
+      <div class="input-section">
+        <label>Password <span class="required-color">*</span></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="password"
+          required
+        />
+        <span id="password-error" class="hide required-color error-message">
+          Passwords Should Have Letter, Special symbols, Numbers And Length >=
+          8
+        </span>
+        <span id="empty-password" class="hide required-color error-message">
+          Password Cannot Be Empty
+        </span>
+      </div>
+
+      <div class="input-section">
+        <label>Confirm Password <span class="required-color">*</span></label>
+        <input
+          type="password"
+          id="verify-password"
+          placeholder="Confirm Password"
+          required
+        />
+        <span
+          id="verify-password-error"
+          class="hide required-color error-message"
+          >Should Be Same As Previous Password</span
+        >
+        <span
+          id="empty-verify-password"
+          class="hide required-color error-message"
+          >Password Cannot Be Empty</span
+        >
+      </div>
+      <button id="submit-button">Signup</button>
+    </form>
+  </div>
+    <footer>
+      <div class="footer-content">
+          <h3>Pizza Hut</h3>
+          <p>Pizza Hut, one of the most popular Pizza destinations in EGYPT is now online. Order Pizza online that is both delicious and value for money.</p>
+          <ul class="socials">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+          </ul>
+      </div>
+      <div class="footer-bottom">
+          <p>© 2022-2023 Pizza Hut Restaurants | All rights reserved. Terms & Conditions apply.<br /><span>coded by 2BHR</span></p>
+      </div>
+  </footer>
+  </body>
+</html>
