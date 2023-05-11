@@ -24,7 +24,7 @@ audio{
     width: 100%;
     min-height: 100%;
     padding-bottom: 250px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("Photos/login.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("Data/login.jpg");
 }
 
 .center {
@@ -173,10 +173,23 @@ audio{
     top:6px;
     filter: brightness(1.4);
 }
-
-.nav_left img:hover {
-    filter: none;
+.cart img {
+    padding: 2.5px;
+    position: absolute;
+    margin-left: 1080px;
+    top:-20px;
+    filter: brightness(1.4);
 }
+#cart_items
+{
+    padding: 2.5px;
+    position: absolute;
+    margin-left: 1133px;
+    top:5px;
+    font-size: 40px;
+    font-weight: bold;
+color: #e9f4fb;}
+
 
 /*LOGIN PAGE END*******************************/
 
@@ -194,7 +207,7 @@ audio{
     width: 100%;
     min-height: 100%;
     padding-bottom: 250px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("Photos/contact.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("Data/contact.jpg");
 }
 
 
@@ -312,7 +325,7 @@ audio{
     
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url("Photos/home.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url("Data/home.jpg");
 }
 .section1 {
     height: 890px;
@@ -605,9 +618,18 @@ audio{
                 min-height: 100%;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
-                background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url("Photos/services.jpg");
+                background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url("Data/services.jpg");
             }
 
+
+            #gif {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+                          
 .section-1 {
     padding-top: 200px;
     margin-bottom: 150px;
@@ -690,6 +712,10 @@ audio{
             box-shadow: rgb(186,5,5,0.8) 2px 3px 4px 4px;
             background-color: rgb(9, 121,0,0.6);
         }
+#xxx{
+    display: flex;
+    justify-content: center;
+}
 .buybtn {
     position: relative;
     margin-left: auto;
@@ -699,7 +725,7 @@ audio{
     background-color: rgba(1, 175, 33, 0.11);
     color: black;
     border-radius: 10px;
-    left: 90px;
+    left: 70px;
     top: 25px;
     border: 2px solid rgb(9, 121,0);
     font-size: 20px;
@@ -711,7 +737,18 @@ audio{
         color: rgba(1, 175, 33, 1);
         background-color: rgba(0, 0,0,0.5);
     }
+#add_cart
+{
+  margin-left: 10px;
+  width: 50px;
+  background-image: url("Data/add_cart.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  
 
+}
 .section-2 div {
     width: 100%;
 }
@@ -774,9 +811,48 @@ audio{
 
 
         }
-        .section-3 div input {
 
-        }
+#add_cart1{
+    margin-left: 10px;
+    width: 50px;
+    background-image: url("Data/add_cart.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 159px;
+}
+#add_cart2{
+    margin-left: 10px;
+    width: 50px;
+    background-image: url("Data/add_cart.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 82px;
+}
+#add_cart3{
+    margin-left: 10px;
+    width: 50px;
+    background-image: url("Data/add_cart.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 197px;
+}
+#add_cart4{
+    margin-left: 10px;
+    width: 50px;
+    background-image: url("Data/add_cart.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 148px;
+}
+
 .btn1d {
     left: 60px;
     top: 142px;
@@ -845,6 +921,8 @@ audio{
                 text-shadow: 2px 2px 3px red;
                 font-family: 'Comic Sans MS';
             }
+
+
 /*SERVICES PAGE END****************************************/
 /***ABOUT US *****************************************/
 .container {

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <script src="jquery-3.6.4.min.js"></script>
     <meta charset="utf-8">
     <title>Services</title>
     <link rel="stylesheet" href="style.css">
@@ -18,17 +19,19 @@
             </div>
             <div>
                 <div class="nav_left">
-                    <div><img src="Photos/logo.png" width="50" /></div>
-
-
+                    <div><img src="Data/logo.png" width="50" /></div>
+                </div>
+                <div class="cart">
+                    <div><img src="Data/cart.png" width="100" /><p id="cart_items">0</p></div>
                 </div>
             </div>
         </div>
+          
         <section class="section-1">
             <h1>Hot Offer !</h1> <br />
             <h2>Buy 1 Get 1 for free</h2> <br />
             <h3>this offer applies on all pizza's kind.</h3>
-            <img src="Photos/b1g1.png" height="250" width="630" />
+            <img src="Data/b1g1.png" height="250" width="630" />
 
 
         </section>
@@ -38,99 +41,102 @@
                 <table class="table" align="center" border="0" cellpadding="1" cellspacing="1">
 
                     <tbody>
-                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Super Supreme<img src="Photos/Super Supreme.png" width="225" height="179" /></td></tr>
+                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Super Supreme<img src="Data/Super Supreme.png" width="225" height="179" /></td></tr>
                         <tr>
                             <td>Pizza Sauce</td>
                             <td>صوص البيتزا</td>
-                            <td><img src="Photos/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
+                            <td><img src="Data/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
                         </tr>
                         <tr>
                             <td>Mozzarella</td>
                             <td>جبنه مودزريلا</td>
-                            <td><img src="Photos/mozzerla.png" style="width: 50px; height: 37px;"></td>
+                            <td><img src="Data/mozzerla.png" style="width: 50px; height: 37px;"></td>
                         </tr>
                         <tr>
                             <td>Beef</td>
                             <td>بيف</td>
-                            <td><img src="Photos/Beef.png" style="width: 50px; height: 39px;"></td>
+                            <td><img src="Data/Beef.png" style="width: 50px; height: 39px;"></td>
                         </tr>
                         <tr>
                             <td>Beef Pepperoni</td>
                             <td>بيف بيبروني</td>
-                            <td><img src="Photos/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Onions</td>
                             <td>بصل</td>
-                            <td><img src="Photos/Onions.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Onions.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Pepper Strips</td>
                             <td>فلفل اخضر</td>
-                            <td><img src="Photos/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
+                            <td><img src="Data/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
                         </tr>
                         <tr>
                             <td>Black Olives</td>
                             <td>زيتون اسود</td>
-                            <td><img src="Photos/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Mushroom</td>
                             <td>مشروم - فطر</td>
-                            <td><img src="Photos/Mushroom.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Mushroom.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr><td><hr /></td></tr>
                         <tr><td style="padding:10px; font-size:larger; font-weight:bold; font-family:'Comic Sans MS'" ;>price : 56$</td></tr>
-                        <tr><td><button class="buybtn">Buy it !</button></td></tr>
+                        <tr><td id="xxx"><button  onclick="Confirm_purchase('Super Supreme',56)" class="buybtn">Buy it !</button>
+                            <button onclick="Cart_Inc()" id="add_cart" class="buybtn add_cart"></button></td></tr>
                     </tbody>
+                 
                 </table>
                 <table class="table" align="center" border="0" cellpadding="1" cellspacing="1">
 
                     <tbody>
-                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Hot Stuff Chicken<img src="Photos/Hot Stuff Chicken.png" width="225" height="179" /></td></tr>
+                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Hot Stuff Chicken<img src="Data/Hot Stuff Chicken.png" width="225" height="179" /></td></tr>
                         <tr>
                             <td>Pizza Sauce</td>
                             <td>صوص البيتزا</td>
-                            <td><img src="Photos/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
+                            <td><img src="Data/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
                         </tr>
                         <tr>
                             <td>Mozzarella</td>
                             <td>جبنه مودزريلا</td>
-                            <td><img src="Photos/mozzerla.png" style="width: 50px; height: 37px;"></td>
+                            <td><img src="Data/mozzerla.png" style="width: 50px; height: 37px;"></td>
                         </tr>
                         <tr>
                             <td>Beef</td>
                             <td>بيف</td>
-                            <td><img src="Photos/Beef.png" style="width: 50px; height: 39px;"></td>
+                            <td><img src="Data/Beef.png" style="width: 50px; height: 39px;"></td>
                         </tr>
                         <tr>
                             <td>Beef Pepperoni</td>
                             <td>بيف بيبروني</td>
-                            <td><img src="Photos/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Onions</td>
                             <td>بصل</td>
-                            <td><img src="Photos/Onions.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Onions.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Pepper Strips</td>
                             <td>فلفل اخضر</td>
-                            <td><img src="Photos/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
+                            <td><img src="Data/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
                         </tr>
                         <tr>
                             <td>Black Olives</td>
                             <td>زيتون اسود</td>
-                            <td><img src="Photos/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Mushroom</td>
                             <td>مشروم - فطر</td>
-                            <td><img src="Photos/Mushroom.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Mushroom.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr><td><hr /></td></tr>
                         <tr><td style="padding:10px; font-size:larger; font-weight:bold; font-family:'Comic Sans MS'" ;>price : 60$</td></tr>
-                        <tr><td><button class="buybtn">Buy it !</button></td></tr>
+                        <tr><td id="xxx"><button onclick="Confirm_purchase('Hot Stuff Chicken',60)" class="buybtn">Buy it !</button>
+                            <button onclick="Cart_Inc()" id="add_cart" class="buybtn add_cart"></button></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -138,99 +144,101 @@
                 <table class="table" align="center" border="0" cellpadding="1" cellspacing="1">
 
                     <tbody>
-                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Hot Stuff Beef<img src="Photos/Hot Stuff Beef.png" width="225" height="179" /></td></tr>
+                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Hot Stuff Beef<img src="Data/Hot Stuff Beef.png" width="225" height="179" /></td></tr>
                         <tr>
                             <td>Pizza Sauce</td>
                             <td>صوص البيتزا</td>
-                            <td><img src="Photos/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
+                            <td><img src="Data/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
                         </tr>
                         <tr>
                             <td>Mozzarella</td>
                             <td>جبنه مودزريلا</td>
-                            <td><img src="Photos/mozzerla.png" style="width: 50px; height: 37px;"></td>
+                            <td><img src="Data/mozzerla.png" style="width: 50px; height: 37px;"></td>
                         </tr>
                         <tr>
                             <td>Beef</td>
                             <td>بيف</td>
-                            <td><img src="Photos/Beef.png" style="width: 50px; height: 39px;"></td>
+                            <td><img src="Data/Beef.png" style="width: 50px; height: 39px;"></td>
                         </tr>
                         <tr>
                             <td>Beef Pepperoni</td>
                             <td>بيف بيبروني</td>
-                            <td><img src="Photos/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Onions</td>
                             <td>بصل</td>
-                            <td><img src="Photos/Onions.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Onions.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Pepper Strips</td>
                             <td>فلفل اخضر</td>
-                            <td><img src="Photos/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
+                            <td><img src="Data/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
                         </tr>
                         <tr>
                             <td>Black Olives</td>
                             <td>زيتون اسود</td>
-                            <td><img src="Photos/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Mushroom</td>
                             <td>مشروم - فطر</td>
-                            <td><img src="Photos/Mushroom.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Mushroom.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr><td><hr /></td></tr>
                         <tr><td style="padding:10px; font-size:larger; font-weight:bold; font-family:'Comic Sans MS'" ;>price : 70$</td></tr>
-                        <tr><td><button class="buybtn">Buy it !</button></td></tr>
+                        <tr><td id="xxx"><button onclick="Confirm_purchase('Hot Stuff Beef',70)" class="buybtn">Buy it !</button>
+                            <button onclick="Cart_Inc()" id="add_cart" class="buybtn add_cart"></button></td></tr>
                     </tbody>
                 </table>
                 <table class="table" align="center" border="0" cellpadding="1" cellspacing="1">
 
                     <tbody>
-                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Pepperoni<img src="Photos/pepronni.png" width="225" height="179" /></td></tr>
+                        <tr><td style="text-align:center; text-shadow:2px 2px 3px red; font-size:30px; font-weight:400; position:relative; bottom:25px; left:50px;">Pepperoni<img src="Data/pepronni.png" width="225" height="179" /></td></tr>
                         <tr>
                             <td>Pizza Sauce</td>
                             <td>صوص البيتزا</td>
-                            <td><img src="Photos/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
+                            <td><img src="Data/Pizza Sauce.png" style="width: 50px; height: 41px;"></td>
                         </tr>
                         <tr>
                             <td>Mozzarella</td>
                             <td>جبنه مودزريلا</td>
-                            <td><img src="Photos/mozzerla.png" style="width: 50px; height: 37px;"></td>
+                            <td><img src="Data/mozzerla.png" style="width: 50px; height: 37px;"></td>
                         </tr>
                         <tr>
                             <td>Beef</td>
                             <td>بيف</td>
-                            <td><img src="Photos/Beef.png" style="width: 50px; height: 39px;"></td>
+                            <td><img src="Data/Beef.png" style="width: 50px; height: 39px;"></td>
                         </tr>
                         <tr>
                             <td>Beef Pepperoni</td>
                             <td>بيف بيبروني</td>
-                            <td><img src="Photos/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Beef%20Pepperoni.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Onions</td>
                             <td>بصل</td>
-                            <td><img src="Photos/Onions.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Onions.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Pepper Strips</td>
                             <td>فلفل اخضر</td>
-                            <td><img src="Photos/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
+                            <td><img src="Data/Pepper%20Strips_0.png" style="width: 50px; height: 43px;"></td>
                         </tr>
                         <tr>
                             <td>Black Olives</td>
                             <td>زيتون اسود</td>
-                            <td><img src="Photos/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Black%20Olives.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr>
                             <td>Mushroom</td>
                             <td>مشروم - فطر</td>
-                            <td><img src="Photos/Mushroom.png" style="width: 50px; height: 50px;"></td>
+                            <td><img src="Data/Mushroom.png" style="width: 50px; height: 50px;"></td>
                         </tr>
                         <tr><td><hr /></td></tr>
                         <tr><td style="padding:10px; font-size:larger; font-weight:bold; font-family:'Comic Sans MS'" ;>price : 40$</td></tr>
-                        <tr><td><button class="buybtn">Buy it !</button></td></tr>
+                        <tr><td id="xxx"><button onclick="Confirm_purchase('Pepperoni',40)" class="buybtn">Buy it !</button>
+                            <button onclick="Cart_Inc()" id="add_cart" class="buybtn add_cart"></button></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -240,23 +248,28 @@
 
             <div class="dessert">
                 <h1>Orange Juice</h1>
-                <img src="Photos/Orange Juice.png" width="94" height="183" />
-                <input class="btn1d" type="button" value="2.5 $ Buy it !">
+                <img src="Data/Orange Juice.png" width="94" height="183" />
+                <input onclick="Confirm_purchase('Orange Juice',2.5)" class="btn1d" type="button" value="2.5 $ Buy it !">
+                <input onclick="Cart_Inc()" id="add_cart1" class="btn1d add_cart" type="button">
+                
             </div>
             <div class="dessert">
                 <h1>Family pepsi</h1>
-                <img src="Photos/Family pepsi.png" width="94" height="261" />
-                <input class="btn2d" type="button" value="3.0 $ Buy it !">
+                <img src="Data/Family pepsi.png" width="94" height="261" />
+                <input onclick="Confirm_purchase('Family pepsi',3.0)" class="btn2d" type="button" value="3.0 $ Buy it !">
+                <input onclick="Cart_Inc()" id="add_cart2" class="btn2d add_cart" type="button">
             </div>
             <div class="dessert">
                 <h1>Chocolate Cake</h1>
-                <img src="Photos/Chocolate Cake.png" width="210" height="145" />
-                <input class="btn3d" type="button" value="4.5 $ Buy it !">
+                <img src="Data/Chocolate Cake.png" width="210" height="145" />
+                <input onclick="Confirm_purchase('Chocolate Cake',4.5)" class="btn3d" type="button" value="4.5 $ Buy it !">
+                <input onclick="Cart_Inc()" id="add_cart3" class="btn3d add_cart" type="button">
             </div>
             <div class="dessert">
                 <h1>Strawberry Cheese Cake</h1>
-                <img src="Photos/Strawberry Cheese Cake.png" width="234" height="155" />
-                <input class="btn4d" type="button" value="4.4 $ Buy it !">
+                <img src="Data/Strawberry Cheese Cake.png" width="234" height="155" />
+                <input onclick="Confirm_purchase('Strawberry Cheese Cake',4.4)" class="btn4d" type="button" value="4.4 $ Buy it !">
+                <input onclick="Cart_Inc()" id="add_cart4" class="btn4d add_cart" type="button">
             </div>
         </section>
 
@@ -289,5 +302,7 @@
             <p>© 2022-2023 Pizza Hut Restaurants | All rights reserved. Terms & Conditions apply.<br /><span>coded by 2BHR</span></p>
         </div>
     </footer>
+    <script src="scripty.js"></script>
+    
 </body>
 </html>

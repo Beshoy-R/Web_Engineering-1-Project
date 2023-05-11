@@ -21,7 +21,7 @@
 
               <div>
                   <div class="nav_left">
-                      <div><img src="Photos/logo.png" width="50" /></div>
+                      <div><img src="Data/logo.png" width="50" /></div>
 
 
                   </div>
@@ -33,11 +33,11 @@
                   <h1>Login</h1>
 
                   <div class="txt_field">
-                      <input type="text" placeholder="Email" required>
+                      <input id="email" type="text" placeholder="Email" required>
 
                   </div>
                   <div class="txt_field">
-                      <input type="password" placeholder="Enter your password " required />
+                      <input id="pass" type="password" placeholder="Enter your password " required />
                   </div>
                   <div class="gender">Gender :</div>
                   <div class="txt_field">
@@ -49,7 +49,7 @@
 
                       <button id="reset-btn" type="reset"> Reset </button>
                   </div>
-                  <input id="submt-login" type="submit" value="Login">
+                  <input id="submt-login" type="submit" value="Login" onclick = "Login()">
 
               </form>
           </div>
@@ -70,5 +70,6 @@
               <p>© 2022-2023 Pizza Hut Restaurants | All rights reserved. Terms & Conditions apply.<br /><span>coded by 2BHR</span></p>
           </div>
       </footer>
+      <script src="scripty.js"></script>
   </body>
 </html>
