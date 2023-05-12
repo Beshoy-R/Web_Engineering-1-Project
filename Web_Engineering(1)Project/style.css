@@ -716,6 +716,87 @@ color: #e9f4fb;}
     display: flex;
     justify-content: center;
 }
+
+#HideME{
+    position: absolute;
+    top: 3100px;
+    left: 250px;
+    width: 85px;
+    
+
+}
+#HideME:hover{
+    transition: .7s;
+    outline: rgb(255, 255, 255) dashed 0px;
+    box-sizing: border-box;
+    box-shadow: rgb(186,5,5,0.8) 2px 3px 4px 4px;
+    background-color: rgb(9, 121,0,0.6);
+
+}
+#FadeME{
+    position: absolute;
+    top: 3100px;
+    left: 350px;
+    width: 85px;
+    
+
+}
+#FadeME:hover{
+    transition: .7s;
+    outline: rgb(255, 255, 255) dashed 0px;
+    box-sizing: border-box;
+    box-shadow: rgb(186,5,5,0.8) 2px 3px 4px 4px;
+    background-color: rgb(9, 121,0,0.6);
+
+}
+#SlideME{
+    position: absolute;
+    top: 3100px;
+    left: 1400px;
+    width: 85px;
+    
+
+}
+#SlideME:hover{
+    transition: .7s;
+    outline: rgb(255, 255, 255) dashed 0px;
+    box-sizing: border-box;
+    box-shadow: rgb(186,5,5,0.8) 2px 3px 4px 4px;
+    background-color: rgb(9, 121,0,0.6);
+
+}
+#AnimateME{
+    position: absolute;
+    top: 3100px;
+    left: 1500px;
+    width: 90px;
+    
+
+}
+#AnimateME:hover{
+    transition: .7s;
+    outline: rgb(255, 255, 255) dashed 0px;
+    box-sizing: border-box;
+    box-shadow: rgb(186,5,5,0.8) 2px 3px 4px 4px;
+    background-color: rgb(9, 121,0,0.6);
+
+}
+#TryMe{
+    position: absolute;
+    top: 1100px;
+    left: 1500px;
+    width: 90px;
+    
+
+}
+#TryMe:hover{
+    transition: .7s;
+    outline: rgb(255, 255, 255) dashed 0px;
+    box-sizing: border-box;
+    box-shadow: rgb(186,5,5,0.8) 2px 3px 4px 4px;
+    background-color: rgb(9, 121,0,0.6);
+
+}
 .buybtn {
     position: relative;
     margin-left: auto;
@@ -806,6 +887,7 @@ color: #e9f4fb;}
         }
         .section-3 div img{
             display:block;
+            position: relative;
             margin-left:auto;
             margin-right:auto;
 

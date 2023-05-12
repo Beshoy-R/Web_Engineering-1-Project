@@ -36,6 +36,7 @@
 
         </section>
         <section class="section-2">
+            <input id="TryMe" class="btn1d add_cart" type="button" value="Try Me!">
             <h1 id="header1">Pizzas</h1>
             <div class="grp1">
                 <table class="table" align="center" border="0" cellpadding="1" cellspacing="1">
@@ -245,17 +246,20 @@
         </section>
         <section class="section-3">
             <h3>Dessert &amp; Drinks</h3>
-
+            
+            <input id="HideME" class="btn1d add_cart" type="button" value="Hide">
+            <input id="FadeME" class="btn1d add_cart" type="button" value="Fade">
+            <input id="SlideME" class="btn1d add_cart" type="button" value="Slide">
+            <input id="AnimateME" class="btn1d add_cart" type="button" value="Animate">
             <div class="dessert">
                 <h1>Orange Juice</h1>
                 <img src="Data/Orange Juice.png" width="94" height="183" />
                 <input onclick="Confirm_purchase('Orange Juice',2.5)" class="btn1d" type="button" value="2.5 $ Buy it !">
-                <input onclick="Cart_Inc()" id="add_cart1" class="btn1d add_cart" type="button">
-                
+                <input onclick="Cart_Inc()" id="add_cart1" class="btn1d add_cart" type="button">                
             </div>
             <div class="dessert">
                 <h1>Family pepsi</h1>
-                <img src="Data/Family pepsi.png" width="94" height="261" />
+                <img id="animateIMG" src="Data/Family pepsi.png" width="94" height="261" />
                 <input onclick="Confirm_purchase('Family pepsi',3.0)" class="btn2d" type="button" value="3.0 $ Buy it !">
                 <input onclick="Cart_Inc()" id="add_cart2" class="btn2d add_cart" type="button">
             </div>
