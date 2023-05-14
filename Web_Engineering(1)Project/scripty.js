@@ -1,3 +1,4 @@
+/******************  LOGIN START ************************/
 function checkHuman() {
   var ans = prompt("Please Solve This equation.\n1+1", "(-_O)");
   if (ans == 2) {
@@ -19,24 +20,77 @@ function Login() {
     alert("EMPTY FIELDS!!");
   }
 }
+/******************  LOGIN END ************************/
+/******************  HOME START ************************/
 
-var Audio = new Audio("Data/audio.mp4");
+$(".cheif-1, .cheif-2, .cheif-3").click(function() {
+  var cheif1 = $(".cheif-1");
+  var cheif2 = $(".cheif-2");
+  var cheif3 = $(".cheif-3");
+
+  if ($(this).hasClass("cheif-1")) {
+    cheif2.fadeToggle(1000);
+    cheif3.fadeToggle(1000);
+  } else if ($(this).hasClass("cheif-2")) {
+    cheif1.fadeToggle(1000);
+    cheif3.fadeToggle(1000);
+  } else if ($(this).hasClass("cheif-3")) {
+    cheif1.fadeToggle(1000);
+    cheif2.fadeToggle(1000);
+  }
+});
+
+
+
+
+
+
+
+/******************  HOME END ************************/
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+/******************  SERVICE START ************************/
+
+$(".section-1 img").click(function()
+{
+  if (prompt("Wanna get the offer ?","YES")=="YES") {
+    
+    $(".section-1 h1").text("Congratulations!")
+
+
+    $(".section-1 img").animate({
+    left:"-100px"
+    },1500).animate(
+  {
+    left:"2000px"
+  },600);
+
+}
+});
+var New_Purhcase = new Audio("Data/audio.mp4");
+var cart_items = 0;
 
 function Confirm_purchase(product_name, price) {
   if (
     confirm(
       "You are about to buy " +
-        product_name +
-        " for " +
-        price +
-        "$\nPlease accept to procced the purchase!"
-    )
-  ) {
-    Audio.play();
+      product_name +
+      " for " +
+      price +
+      "$\nPlease accept to procced the purchase!"
+      )
+      ) {
+        New_Purhcase.play();
   }
 }
 
-var cart_items = 0;
 
 function Cart_Inc() {
   if (cart_items <= 8) {
@@ -53,26 +107,6 @@ $("#cart_items").mouseenter(function () {
 $("#cart_items").click(function () {
   cart_items = 0;
   document.getElementById("cart_items").innerHTML = 0;
-});
-
-function getRandomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-$(".xx").on({
-  mouseenter: function () {
-    alert("ahhh");
-    $(this).css("background-color", getRandomColor());
-  },
-
-  mouseleave: function () {
-    $(this).css("background-color", getRandomColor());
-  },
 });
 
 $("#HideME").click(function () {
@@ -98,12 +132,41 @@ $("#AnimateME").click(function () {
 });
 
 $("#TryMe").click(function () {
-  $(".section-2").css("background-color", "red").delay(500).slideUp(2000).slideDown(2000)
+  $(".section-2")
+    .css("background-color", "red")
+    .delay(500)
+    .slideUp(2000)
+    .slideDown(2000)
     .queue(function (next) {
       $(this).css("background-color", "green");
       next();
-    }).delay(500).slideUp(2000).slideDown(2000).queue(function (next) {
+    })
+    .delay(500)
+    .slideUp(2000)
+    .slideDown(2000)
+    .queue(function (next) {
       $(this).css("background-color", "blue");
       next();
-    }).delay(500).slideUp(2000).slideDown(2000);
+    })
+    .delay(500)
+    .slideUp(2000)
+    .slideDown(2000);
 });
+
+/************************* SERVICE END *************************/
+
+
+
+/************************* ABOUT US START *************************/
+$(".about-p").on({
+  mouseenter: function () {
+    $(this).css("background-color", getRandomColor());
+    $(".container").css("background-color", getRandomColor());
+  },
+
+  mouseleave: function () {
+    $(this).css("background-color", getRandomColor());
+    $(".container").css("background-color", getRandomColor());
+  }
+});
+/************************* ABOUT US END*************************/
